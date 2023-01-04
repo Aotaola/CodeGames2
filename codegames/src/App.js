@@ -1,23 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import NavBar from './NavBar';
+import GameCard from './GameCard';
+import Footer from './footer';
+import { useEffect, useState } from 'react';
+import QuizContainer from './QuizContainer';
 
 function App() {
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [showScore, setShowScore] = useState(false);
+  const [score, setScore] = useState(0);
+  const [questions, setQuestions] = useState([]);
+  
+  const loadQuestions =()=>{
+    fetch("http://localhost:3001/questions")
+    .then(res=>res.json())
+    .then((qs)=>{
+      console.log(qs)
+    setQuestions(qs)
+    })
+  }
+  useEffect(loadQuestions,[])
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar />
+      <QuizContainer questions={questions} />
+      <Footer />
     </div>
   );
 }
