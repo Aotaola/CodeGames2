@@ -2,10 +2,46 @@
   "questions": [
     {
       "id": 1,
-      "q": "sample question 1",
-      "answerKey": "sample answer 1"
+      "q": "Which of the following command is used to create a react-js-app named appname ?",
+      "hint": "Order matters",
+      "answerKey": "npx create-react-app appname"
     },
-    { "id": 2, "q": "sample question 2", "answerKey": "sample answer 2" },
-    { "id": 3, "q": "sample question 3", "answerKey": "sample answer 3" }
+    {
+      "id": 2,
+      "q": "What is the default port number in which the application run ?",
+      "hint": "Jonas Brothers",
+      "answerKey": "3000"
+    },
+    {
+      "id": 3,
+      "q": "In React.js, how we can pass the data from one component to another in React.js ?",
+      "hint": "Short for property",
+      "answerKey": "Props"
+    },
+    {
+      "id": 4,
+      "q": "What is used to render components in web pages ?",
+      "hint": "Parenthesis matter",
+      "answerKey": "render()"
+    },
+    {
+      "id": 5,
+      "q": "How do you create a React component named App?",
+      "hint": "Always export",
+      "answerKey": "function App() {return( <div>!</div>;)} Export default App"
+    },
+    {
+      "id": 6,
+      "q": "What command is used to start the React local development server?",
+      "hint": "Not stop but",
+      "answerKey": "Npm start"
+    },
+    {
+      "id": 7,
+      "q": "Which keyword creates a constant in JavaScript?",
+      "hint": "In the word",
+      "answerKey": "const"
+    }
+  
   ]
 }

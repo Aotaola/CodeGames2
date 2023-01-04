@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 const GameCard = ({question, questionNumber, setQuestionNumber}) => {
-  const {q, answerKey} = question
+  const {q, answerKey, hint} = question
     const [answer, setAnswer] = useState("");
   const [isCorrect, setIsCorrect] = useState(true);
   const [userInput, setUserInput] = useState("");
@@ -31,7 +31,7 @@ const GameCard = ({question, questionNumber, setQuestionNumber}) => {
       <form id="msform" onSubmit={handleSubmit}>
         <fieldset>
           <h2 className="fs-title">{q}</h2>
-          <h3 className="fs-subtitle">Hint: will be right here</h3>
+          <h3 className="fs-subtitle">Hint: {hint}</h3>
           <input
             type="text"
             name="fname"
