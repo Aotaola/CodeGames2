@@ -1,22 +1,18 @@
-const QuizContainer = () => {
-  const [userInput, setUserInput] = useState("");
-  const [answer, setAnswer] = useState("answer");
-  const [isCorrect, setIsCorrect] = useState(true);
-  function handleChange(e) {
-    setUserInput(e.target.value);
-    setIsCorrect(e.target.value === answer);
-  }
+import { useState } from "react";
+import GameCard from "./GameCard";
+
+const QuizContainer = ({ questions }) => {
+  const [questionNumber, setQuestionNumber] = useState(0);
+  console.log('question no:', questionNumber)
+
+  if (!questions[questionNumber]) return null 
   return (
     <div>
-      <h2>QUESTIONS BAR</h2>
-      <input
-        fluid
-        label="questions"
-        placeholder="questions"
-        value={userInput}
-        onChange={handleChange}
+      <GameCard
+        question={questions[questionNumber]}
+        questionNumber={questionNumber}
+        setQuestionNumber={setQuestionNumber}
       />
-      {isCorrect !== true && <p>{isCorrect ? "Correct" : "Incorrect"}</p>}
     </div>
   );
 };
