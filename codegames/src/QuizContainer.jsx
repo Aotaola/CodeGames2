@@ -4,7 +4,6 @@ import GameCard from "./GameCard";
 const QuizContainer = ({ questions }) => {
   const [questionNumber, setQuestionNumber] = useState(0);
   const [timeRemaining, setTimeRemaining] = useState(10); // added this line
-  console.log('question no:', questionNumber)
 
   useEffect(() => {
     // start the timer when the component mounts or updates
