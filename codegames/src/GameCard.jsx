@@ -1,29 +1,30 @@
 import React, { useState } from "react";
-const GameCard = ({question, questionNumber, setQuestionNumber}) => {
-  const {q, answerKey} = question
-    const [answer, setAnswer] = useState("");
+const GameCard = ({ question, questionNumber, setQuestionNumber }) => {
+  const { q, answerKey, hint } = question;
+  const [answer, setAnswer] = useState("");
   const [isCorrect, setIsCorrect] = useState(true);
   const [userInput, setUserInput] = useState("");
 
   function handleChange(e) {
     setUserInput(e.target.value);
     setIsCorrect(e.target.value === answer);
-    setAnswer(e.target.value)
+    setAnswer(e.target.value);
   }
 
   function handleSubmit(e) {
-    e.preventDefault(); 
-    console.log("submitted")
-    if (answer === answerKey){
-        setQuestionNumber(questionNumber+1)
-        setIsCorrect(!isCorrect)
-        console.log("correct")
+    e.preventDefault();
+    console.log("submitted");
+    if (answer === answerKey) {
+      setQuestionNumber(questionNumber + 1);
+      setIsCorrect(!isCorrect);
+      console.log("correct");
+      setUserInput("");
     } else {
-        setQuestionNumber(questionNumber);
-        console.log("incorrect");
-
+      setQuestionNumber(questionNumber);
+      console.log("incorrect");
+      setUserInput("");
     }
-    // submit the question and answer to the server 
+    // submit the question and answer to the server
   }
 
   return (
@@ -31,7 +32,7 @@ const GameCard = ({question, questionNumber, setQuestionNumber}) => {
       <form id="msform" onSubmit={handleSubmit}>
         <fieldset>
           <h2 className="fs-title">{q}</h2>
-          <h3 className="fs-subtitle">Hint: will be right here</h3>
+          <h3 className="fs-subtitle">Hint: {hint}</h3>
           <input
             type="text"
             name="fname"
@@ -45,7 +46,7 @@ const GameCard = ({question, questionNumber, setQuestionNumber}) => {
             className="next action-button"
             value="Submit"
           />
-          {isCorrect !== true && <p>{isCorrect ? "Correct" : "Incorrect"}</p>}
+          {isCorrect !== true && <p>{isCorrect ? "Correct" : "Try Again"}</p>}
         </fieldset>
       </form>
     </div>

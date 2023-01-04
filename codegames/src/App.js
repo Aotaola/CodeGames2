@@ -23,9 +23,7 @@ function App() {
   
   return (
     <div className="App">
-      <NavBar />
       <QuizContainer questions={questions} />
-      <Footer />
     </div>
   );
 }
