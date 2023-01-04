@@ -4,6 +4,7 @@ const GameCard = ({ question, questionNumber, setQuestionNumber }) => {
   const [answer, setAnswer] = useState("");
   const [isCorrect, setIsCorrect] = useState(true);
   const [userInput, setUserInput] = useState("");
+  const [formError, setFormError] = useState(false);
 
   function handleChange(e) {
     setUserInput(e.target.value);
@@ -23,6 +24,8 @@ const GameCard = ({ question, questionNumber, setQuestionNumber }) => {
       setQuestionNumber(questionNumber);
       console.log("incorrect");
       setUserInput("");
+      setFormError(false)
+      navigator.vibrate(200); // Vibrate for 200ms
     }
     // submit the question and answer to the server
   }
@@ -39,6 +42,11 @@ const GameCard = ({ question, questionNumber, setQuestionNumber }) => {
             placeholder="Type Your Code Here!"
             value={userInput}
             onChange={handleChange}
+            style={
+              formError
+                ? { border: "2px solid green" }
+                : { border: "2px solid red" }
+            }
           />
           <input
             type="submit"
@@ -46,7 +54,7 @@ const GameCard = ({ question, questionNumber, setQuestionNumber }) => {
             className="next action-button"
             value="Submit"
           />
-          {isCorrect !== true && <p>{isCorrect ? "Correct" : "Try Again"}</p>}
+          {isCorrect !== true && <p>{isCorrect ? "Correct!" : "Try Again"}</p>}
         </fieldset>
       </form>
     </div>
