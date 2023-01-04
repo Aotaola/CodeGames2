@@ -42,6 +42,17 @@
       "hint": "In the word",
       "answerKey": "const"
     }
-  
+  ],
+  "players": [
+    {
+      "name": "name here",
+      "id": 1,
+      "score": 0
+    },
+    {
+      "name": "Sam Adel",
+      "score": 0,
+      "id": 2
+    }
   ]
 }
