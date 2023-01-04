@@ -34,14 +34,21 @@ const Home = () => {
 
   return (
     <div className="home">
-      <h1>Welcome to the Quiz Game!</h1>
       {/* added the form element */}
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="name">
-          Enter your name:
-          <input type="text" name="name" value={name} onChange={handleChange} />
-        </label>
-        <input type="submit" value="Submit" />
+      <form id="msform" onSubmit={handleSubmit}>
+        <fieldset>
+          <h2 className="fs-title">Welcome to the Quiz Game!</h2>
+          <label htmlFor="name">
+            <input
+              placeholder="Enter Your Name Here!"
+              type="text"
+              name="name"
+              value={name}
+              onChange={handleChange}
+            />
+          </label>
+          <input type="submit" value="Submit" />
+        </fieldset>
       </form>
       <div>
         <button

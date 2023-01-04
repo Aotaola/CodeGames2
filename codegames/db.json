@@ -1,5 +1,4 @@
 {
-
   "questions": [
     {
       "id": 1,
@@ -44,12 +43,16 @@
       "answerKey": "const"
     }
   ],
-
   "players": [
     {
       "name": "name here",
       "id": 1,
       "score": 0
+    },
+    {
+      "name": "Same",
+      "score": 0,
+      "id": 2
     }
   ]
 }
