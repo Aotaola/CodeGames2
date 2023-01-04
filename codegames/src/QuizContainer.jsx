@@ -27,13 +27,12 @@ const QuizContainer = ({ questions }) => {
   return (
     <div>
       {/* added this element to display the timer */}
-      <div className="timer" style={{ position: "absolute", top: 0, right: 0 }}>
-        Time remaining: {timeRemaining} seconds
-      </div>
+     
       <GameCard
         question={questions[questionNumber]}
         questionNumber={questionNumber}
         setQuestionNumber={setQuestionNumber}
+        timeRemaining={timeRemaining}
       />
     </div>
   );

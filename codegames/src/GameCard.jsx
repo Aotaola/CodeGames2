@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-const GameCard = ({ question, questionNumber, setQuestionNumber }) => {
+const GameCard = ({ question, questionNumber, setQuestionNumber, timeRemaining }) => {
   const { q, answerKey, hint } = question;
   const [answer, setAnswer] = useState("");
   const [isCorrect, setIsCorrect] = useState(true);
@@ -57,6 +57,9 @@ const GameCard = ({ question, questionNumber, setQuestionNumber }) => {
           {isCorrect !== true && <p>{isCorrect ? "Correct!" : "Try Again"}</p>}
         </fieldset>
       </form>
+      <div className="timer" >
+        Time remaining: {timeRemaining} seconds
+      </div>
     </div>
   );
 };
