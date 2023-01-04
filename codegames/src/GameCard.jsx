@@ -1,28 +1,37 @@
-import React, { useState } from 'react';
-const GameCard = ()=>{
-
-const [question, setQuestion] = useState('');
-const [answer, setAnswer] = useState('');
+import React, { useState } from "react";
+const GameCard = ({question, questionNumber, setQuestionNumber}) => {
+  const {q, answerKey} = question
+    const [answer, setAnswer] = useState("");
   const [isCorrect, setIsCorrect] = useState(true);
-    const [userInput, setUserInput] = useState("");
+  const [userInput, setUserInput] = useState("");
 
-function handleChange(e) {
-  setUserInput(e.target.value);
-  setIsCorrect(e.target.value === answer);
-}
+  function handleChange(e) {
+    setUserInput(e.target.value);
+    setIsCorrect(e.target.value === answer);
+    setAnswer(e.target.value)
+  }
 
-function handleSubmit(event) {
-event.preventDefault();
-// submit the question and answer to the server
-}
+  function handleSubmit(e) {
+    e.preventDefault(); 
+    console.log("submitted")
+    if (answer === answerKey){
+        setQuestionNumber(questionNumber+1)
+        setIsCorrect(!isCorrect)
+        console.log("correct")
+    } else {
+        setQuestionNumber(questionNumber);
+        console.log("incorrect");
 
+    }
+    // submit the question and answer to the server 
+  }
 
   return (
     <div className="gamecard">
-      <form id="msform">
+      <form id="msform" onSubmit={handleSubmit}>
         <fieldset>
-          <h2 class="fs-title">Sample Code Will Be Here</h2>
-          <h3 class="fs-subtitle">Hint: will be right here</h3>
+          <h2 className="fs-title">{q}</h2>
+          <h3 className="fs-subtitle">Hint: will be right here</h3>
           <input
             type="text"
             name="fname"
@@ -31,9 +40,9 @@ event.preventDefault();
             onChange={handleChange}
           />
           <input
-            type="button"
+            type="submit"
             name="next"
-            class="next action-button"
+            className="next action-button"
             value="Submit"
           />
           {isCorrect !== true && <p>{isCorrect ? "Correct" : "Incorrect"}</p>}
@@ -41,9 +50,6 @@ event.preventDefault();
       </form>
     </div>
   );
+};
 
-            
-
-}
-
-export default GameCard
+export default GameCard;
