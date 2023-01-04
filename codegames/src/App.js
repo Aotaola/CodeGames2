@@ -1,23 +1,32 @@
 import logo from './logo.svg';
 import './App.css';
+import NavBar from './NavBar';
+import GameCard from './GameCard';
+import Footer from './footer';
+import { useEffect, useState } from 'react';
 
 function App() {
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [showScore, setShowScore] = useState(false);
+  const [score, setScore] = useState(0);
+  const [questions, setQuestions] = useState([]);
+
+  
+  const loadQuestions =()=>{
+    fetch("http://localhost:3000/questions")
+    .then(res=>res.json())
+    .then((questions)=>{
+      console.log(questions)
+    setQuestions(questions)
+    })
+  }
+  useEffect(loadQuestions,[])
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar />
+      <GameCard />
+      <Footer />
     </div>
   );
 }
