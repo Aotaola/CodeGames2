@@ -23,7 +23,7 @@ const QuizContainer = ({ questions }) => {
     return () => clearTimeout(timer);
   }, [timeRemaining]);
 
-  if (!questions[questionNumber]) return null 
+  if (!questions[questionNumber]) return <div>"Game Over"</div> 
   return (
     <div>
       {/* added this element to display the timer */}
