@@ -1,22 +1,23 @@
 {
+
   "questions": [
     {
       "id": 1,
-      "q": "Which of the following command is used to create a react-js-app named appname ?",
+      "q": "1",
       "hint": "Order matters",
-      "answerKey": "npx create-react-app appname"
+      "answerKey": "1"
     },
     {
       "id": 2,
-      "q": "What is the default port number in which the application run ?",
+      "q": "2",
       "hint": "Jonas Brothers",
-      "answerKey": "3000"
+      "answerKey": "2"
     },
     {
       "id": 3,
-      "q": "In React.js, how we can pass the data from one component to another in React.js ?",
+      "q": "3",
       "hint": "Short for property",
-      "answerKey": "Props"
+      "answerKey": "3"
     },
     {
       "id": 4,
@@ -43,16 +44,12 @@
       "answerKey": "const"
     }
   ],
+
   "players": [
     {
       "name": "name here",
       "id": 1,
       "score": 0
-    },
-    {
-      "name": "Sam Adel",
-      "score": 0,
-      "id": 2
     }
   ]
 }
