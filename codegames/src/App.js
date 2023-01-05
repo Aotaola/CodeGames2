@@ -4,6 +4,7 @@ import GameCard from './GameCard';
 import Footer from './footer';
 import { useEffect, useState } from 'react';
 import QuizContainer from './QuizContainer';
+import ScoreCard from './ScoreCard';
 
 function App() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -24,6 +25,7 @@ function App() {
   return (
     <div className="App">
       <QuizContainer questions={questions} />
+      <ScoreCard/>
     </div>
   );
 }
