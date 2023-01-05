@@ -29,6 +29,7 @@ const Home = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        navigate("/game");
       });
   }
 
@@ -37,21 +38,21 @@ const Home = () => {
       {/* added the form element */}
       <form id="msform" onSubmit={handleSubmit}>
         <fieldset>
-          <h2 className="fs-title">Welcome to the Quiz Game!</h2>
+          <h2 className="fs-title">Welcome to CodeGames!</h2>
           <label htmlFor="name">
             <input
-              placeholder="Enter Your Name Here!"
+              placeholder="Enter Your Name Here"
               type="text"
               name="name"
               value={name}
               onChange={handleChange}
             />
           </label>
-          <input type="submit" value="Submit" />
+          <input id="startgame" type="submit" value="Start Game!" />
         </fieldset>
       </form>
-      <div>
-        <button
+      {/* <div> */}
+        {/* <button
           className="button-19"
           onClick={() => {
             navigate("/game");
@@ -60,7 +61,7 @@ const Home = () => {
           START GAME!
         </button>
       </div>
-      {/* <button onClick={startGame}>Start Game</button> */}
+      <button onClick={startGame}>Start Game</button> */}
     </div>
   );
 };
