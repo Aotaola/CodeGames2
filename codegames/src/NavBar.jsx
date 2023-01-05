@@ -1,3 +1,5 @@
+import ScoreCard from "./ScoreCard"
+
 const NavBar = () => {
     return (
         <div className="header">

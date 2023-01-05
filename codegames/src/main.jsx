@@ -6,6 +6,7 @@ import App from "./App";
 import Home from "./Home";
 import Footer from "./footer";
 import NavBar from "./NavBar";
+import ScoreCard from "./ScoreCard";
  
 
 const router = createBrowserRouter([
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
   {
     path: "/game",
     element: <App />,
+  },
+  {
+    path: "/scores",
+    element: <ScoreCard />,
   },
   {
     path: "*",
