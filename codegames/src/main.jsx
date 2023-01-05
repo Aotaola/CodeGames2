@@ -19,12 +19,12 @@ const router = createBrowserRouter([
     element: <ScoreCard />,
   },
   {
-    path: "*",
-    element: <div>404 NOT FOUND</div>,
+    path: "/about",
+    element: <About/>,
   },
   {
-    path: "/about",
-  element: <About/>,
+    path: "*",
+    element: <div>404 NOT FOUND</div>,
   },
 ]);
 

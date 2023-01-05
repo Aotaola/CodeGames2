@@ -5,6 +5,7 @@ const GameCard = ({
   questionNumber,
   setQuestionNumber,
   timeRemaining,
+  setTimeRemaining,
   name,
   score,
   setScore
@@ -15,12 +16,13 @@ const GameCard = ({
   const [userInput, setUserInput] = useState("");
   const [formError, setFormError] = useState(false);
 
+  
   function handleChange(e) {
     setUserInput(e.target.value);
     setIsCorrect(e.target.value === answer);
     setAnswer(e.target.value);
   }
-
+  
   function handleSubmit(e) {
     e.preventDefault();
     console.log("submitted");
@@ -30,6 +32,7 @@ const GameCard = ({
       console.log("correct");
       setUserInput("");
       setScore(score + 1);
+      setTimeRemaining(20)
     } else {
       setQuestionNumber(questionNumber);
       console.log("incorrect");
@@ -39,7 +42,8 @@ const GameCard = ({
     }
     // submit the question and answer to the server
   }
-
+  
+  // setTimeRemaining(20)
   return (
     <div>
       <form id="msform" onSubmit={handleSubmit}>
