@@ -4,14 +4,14 @@ import NavBar from "./NavBar";
 
 const QuizContainer = ({ questions, name, score, setScore, players, currentPlayer}) => {
   const [questionNumber, setQuestionNumber] = useState(0);
-  const [timeRemaining, setTimeRemaining] = useState(10); // added this line
+  const [timeRemaining, setTimeRemaining] = useState(20); // added this line
 
   useEffect(() => {
     // start the timer when the component mounts or updates
     const timer = setTimeout(() => {
       setQuestionNumber(questionNumber + 1);
-      setTimeRemaining(10); // reset the timer
-    }, 10000); // 10 seconds in milliseconds
+      setTimeRemaining(20); // reset the timer
+    }, 20000); // 20 seconds in milliseconds
     // clear the timer when the component unmounts
     return () => clearTimeout(timer);
   }, [questionNumber]);

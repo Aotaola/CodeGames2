@@ -2,20 +2,20 @@
   "questions": [
     {
       "id": 1,
-      "q": "What is the default port number in which the application run?",
+      "q": "What is the default port number in which the application runs?",
       "hint": "Jonas Brothers",
       "answerKey": "3000"
     },
     {
       "id": 2,
-      "q": "How we can pass data from one component to another in React.js ?",
+      "q": "How can we pass data from one component to another in React.js?",
       "hint": "Short for property",
       "answerKey": "props"
     },
     {
       "id": 3,
       "q": "Write the body of a React Component in the least amount of characters:",
-      "hint": "Always export",
+      "hint": "can include an empty fragment",
       "answerKey": "return(<></>)"
     },
     {
@@ -32,7 +32,7 @@
     },
     {
       "id": 6,
-      "q": "This is an HTML-like syntax extension for JavaScript written to be used with React. This is specifically how React adds XML syntax to JavaScript which is compiled to JavaScript at runtime.",
+      "q": "What is the HTML-like syntax extension for JavaScript to be used with React?",
       "hint": "Not JavaScript but…",
       "answerKey": "JSX"
     },
@@ -51,12 +51,12 @@
     {
       "id": 9,
       "q": "When rendering a list using the JavaScript map() method, what is required for each element rendered?",
-      "hint": "lock and",
+      "hint": "lock and ...",
       "answerKey": "key"
     },
     {
       "id": 10,
-      "q": "React component names must begin with an lowercase letter",
+      "q": "React component names must begin with a lowercase letter",
       "hint": "true or false",
       "answerKey": "false"
     }
