@@ -4,7 +4,6 @@ import NavBar from "./NavBar";
 const ScoreCard = () => {
   /// funcionality is compleate, all it needs to input automaically
   //is to pass down the props responsible for "playername" and "totalScore"
-  const [scores, setScores] = useState([]);
   const [playerName, setPlayerName] = useState(""); //replace empty string with "playername" value
   const [totalScore, setTotalScore] = useState(0); //replace 0 with "totalscore" value
   const [players, setPlayers] = useState([]); //replace empty string with "playername" value
@@ -45,9 +44,13 @@ const ScoreCard = () => {
       <h1>Score Board: </h1>
       {players.map((player) => {
         return (
-          <li>
-            Player: {player.name} Score: {player.score}/10
-          </li>
+          <form id="msform">
+            <fieldset>
+              <h6>
+                Player: {player.name} Score: {player.score}/10
+              </h6>
+            </fieldset>
+          </form>
         );
       })}
     </div>

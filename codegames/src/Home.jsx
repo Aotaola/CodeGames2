@@ -3,9 +3,9 @@ import { useNavigate } from "react-router-dom";
 import NavBar from "./NavBar";
 import QuizContainer from "./QuizContainer";
 
-const Home = () => {
-  const [name, setName] = useState(""); // added this state variable to store the name
+const Home = ({ setShowGame, name, setName, currentPlayer, setCurrentPlayer}) => {
   const [score, setScore] = useState(0); // added this state variable to store the score
+
   // let navigate = useNavigate();
 
   function handleChange(e) {
@@ -30,8 +30,9 @@ const Home = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
-        // navigate("/game");
+        console.log("CURRENT PLAYER", data);
+        setCurrentPlayer(data)
+        setShowGame(false);
       });
   }
 

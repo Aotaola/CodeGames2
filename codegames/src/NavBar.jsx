@@ -1,7 +1,7 @@
 import ScoreCard from "./ScoreCard";
 import { useNavigate } from "react-router-dom";
 
-const NavBar = () => {
+const NavBar = ({setShowGame}) => {
   let navigate = useNavigate();
 
   return (
@@ -17,7 +17,15 @@ const NavBar = () => {
         High Scores
       </button>
       <p></p>
-      <button className="navbutton">Home</button>
+      <button
+        className="navbutton"
+        onClick={() => {
+          navigate("/");
+          setShowGame(true)
+        }}
+      >
+        Home
+      </button>
     </div>
   );
 };
