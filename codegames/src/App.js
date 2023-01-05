@@ -5,9 +5,9 @@ import Footer from './footer';
 import { useEffect, useState } from 'react';
 import QuizContainer from './QuizContainer';
 import ScoreCard from './ScoreCard';
+import Home from './Home';
 
 function App() {
-  const [score, setScore] = useState(0);
   const [questions, setQuestions] = useState([]);
   const [players, setPlayers] = useState()
   
@@ -15,7 +15,7 @@ function App() {
     fetch("http://localhost:3001/questions")
     .then(res=>res.json())
     .then((qs)=>{
-      console.log(qs)
+      console.log("render",qs)
     setQuestions(qs)
     })
   }
@@ -30,10 +30,13 @@ function App() {
       });
   };
   useEffect(loadPlayers, []);
+
+  // <Home questions={questions}/>
   
   return (
     <div className="App">
       <QuizContainer questions={questions} />
+      <Home />
     </div>
   );
 }

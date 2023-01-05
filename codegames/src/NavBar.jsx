@@ -2,7 +2,7 @@ import ScoreCard from "./ScoreCard";
 import { useNavigate } from "react-router-dom";
 
 const NavBar = () => {
-  //   let navigate = useNavigate();
+    // let navigate = useNavigate();
 
   return (
     <div className="header">

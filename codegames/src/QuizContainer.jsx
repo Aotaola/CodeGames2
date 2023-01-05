@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import GameCard from "./GameCard";
 
-const QuizContainer = ({ questions }) => {
+const QuizContainer = ({ questions, name, setName }) => {
   const [questionNumber, setQuestionNumber] = useState(0);
   const [timeRemaining, setTimeRemaining] = useState(10); // added this line
 
@@ -23,7 +23,12 @@ const QuizContainer = ({ questions }) => {
     return () => clearTimeout(timer);
   }, [timeRemaining]);
 
-  if (!questions[questionNumber]) return <div>"Game Over"</div> 
+  if (!questions[questionNumber]) {
+    return <div>"Game Over"</div> 
+
+  }
+    
+  
   return (
     <div>
       {/* added this element to display the timer */}
@@ -34,6 +39,8 @@ const QuizContainer = ({ questions }) => {
         setQuestionNumber={setQuestionNumber}
         timeRemaining={timeRemaining}
       />
+      <div>
+      </div>
     </div>
   );
 };

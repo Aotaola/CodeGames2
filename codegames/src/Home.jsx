@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import QuizContainer from "./QuizContainer";
 
 const Home = () => {
   const [name, setName] = useState(""); // added this state variable to store the name
   const [score, setScore] = useState(0); // added this state variable to store the score
-  let navigate = useNavigate();
+  // let navigate = useNavigate();
 
   function handleChange(e) {
     setName(e.target.value);
@@ -29,7 +30,7 @@ const Home = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        navigate("/game");
+        // navigate("/game");
       });
   }
 
