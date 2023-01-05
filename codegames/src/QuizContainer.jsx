@@ -10,7 +10,7 @@ const QuizContainer = ({ questions }) => {
     const timer = setTimeout(() => {
       setQuestionNumber(questionNumber + 1);
       setTimeRemaining(10); // reset the timer
-    }, 10000); // 10 seconds in milliseconds
+    }, 100000); // 10 seconds in milliseconds
     // clear the timer when the component unmounts
     return () => clearTimeout(timer);
   }, [questionNumber]);

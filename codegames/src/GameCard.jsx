@@ -31,7 +31,7 @@ const GameCard = ({ question, questionNumber, setQuestionNumber, timeRemaining }
   }
 
   return (
-    <div className="gamecard">
+    <div >
       <form id="msform" onSubmit={handleSubmit}>
         <fieldset>
           <h2 className="fs-title">{q}</h2>

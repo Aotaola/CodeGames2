@@ -5,6 +5,7 @@
 * {
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 html {
@@ -20,6 +21,10 @@ html {
 body {
   font-family: montserrat, arial, verdana;
   background: transparent;
+  display: block;
+  margin: auto;
+    text-align: center;
+
 }
 
 /*form styles*/
@@ -212,6 +217,7 @@ body {
   padding: 30px;
   font-size: 75px;
   font-weight: bold;
+  color:#2c3e50
 }
 
 .footer {
@@ -256,7 +262,7 @@ body {
   -webkit-user-select: none;
   vertical-align: middle;
   white-space: nowrap;
-  width: 100%;
+  width: 80%;
 }
 
 .button-19:after {
@@ -289,4 +295,24 @@ body {
 
 .button-19:disabled {
   cursor: auto;
+}
+
+.timer {
+  text-align: center;
+  display: block;
+  margin: auto;
+  width: 200px;
+  background: #ee0979;
+  font-weight: bold;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin-top: 30px; 
+}
+
+#startgame {
+  background-color: #ee0979;
+  color: #ffffff;
+
 }
