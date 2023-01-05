@@ -5,13 +5,15 @@ const GameCard = ({
   questionNumber,
   setQuestionNumber,
   timeRemaining,
+  name,
+  score,
+  setScore
 }) => {
   const { q, answerKey, hint } = question;
   const [answer, setAnswer] = useState("");
   const [isCorrect, setIsCorrect] = useState(true);
   const [userInput, setUserInput] = useState("");
   const [formError, setFormError] = useState(false);
-  const [score, setScore] = useState(0);
 
   function handleChange(e) {
     setUserInput(e.target.value);
@@ -68,7 +70,7 @@ const GameCard = ({
       <div className="timer">Time remaining: {timeRemaining} seconds</div>
       <form id="msform" onSubmit={handleSubmit}>
         <fieldset>
-          <h2 className="fs-title">Player: </h2>
+          <h2 className="fs-title">Player: {name}</h2>
           <h2 className="fs-title">Score: {score}/10</h2>
         </fieldset>
       </form>
