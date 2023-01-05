@@ -45,34 +45,20 @@
   ],
   "players": [
     {
-      "name": "name here",
+      "name": "Alejandro",
       "id": 1,
-      "score": 0
+      "score": 10
     },
     {
-      "name": "Same",
-      "score": 0,
+      "name": "Sam",
+      "score": 9,
       "id": 2
     },
     {
-      "name": "",
-      "score": 0,
+      "name": "Rochelle"
+      "score": 8,
       "id": 3
-    },
-    {
-      "name": "Rochelle",
-      "score": 0,
-      "id": 4
-    },
-    {
-      "name": "",
-      "score": 0,
-      "id": 5
-    },
-    {
-      "name": "",
-      "score": 0,
-      "id": 6
     }
+   
   ]
 }

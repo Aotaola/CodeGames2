@@ -7,10 +7,9 @@ import QuizContainer from './QuizContainer';
 import ScoreCard from './ScoreCard';
 
 function App() {
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [showScore, setShowScore] = useState(false);
   const [score, setScore] = useState(0);
   const [questions, setQuestions] = useState([]);
+  const [players, setPlayers] = useState()
   
   const loadQuestions =()=>{
     fetch("http://localhost:3001/questions")
@@ -21,6 +20,16 @@ function App() {
     })
   }
   useEffect(loadQuestions,[])
+
+  const loadPlayers = () => {
+    fetch("http://localhost:3001/players")
+      .then((res) => res.json())
+      .then((ps) => {
+        console.log(ps);
+        setPlayers(ps);
+      });
+  };
+  useEffect(loadPlayers, []);
   
   return (
     <div className="App">
