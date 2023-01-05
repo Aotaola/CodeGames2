@@ -2,45 +2,63 @@
   "questions": [
     {
       "id": 1,
-      "q": "1",
-      "hint": "Order matters",
-      "answerKey": "1"
+      "q": "What is the default port number in which the application run?",
+      "hint": "Jonas Brothers",
+      "answerKey": "3000"
     },
     {
       "id": 2,
-      "q": "2",
-      "hint": "Jonas Brothers",
-      "answerKey": "2"
+      "q": "How we can pass data from one component to another in React.js ?",
+      "hint": "Short for property",
+      "answerKey": "props"
     },
     {
       "id": 3,
-      "q": "3",
-      "hint": "Short for property",
-      "answerKey": "3"
+      "q": "Write the body of a React Component in the least amount of characters:",
+      "hint": "Always export",
+      "answerKey": "return(<></>)"
     },
     {
       "id": 4,
-      "q": "What is used to render components in web pages ?",
-      "hint": "Parenthesis matter",
-      "answerKey": "render()"
+      "q": "What command is used to start the React local development server?",
+      "hint": "Not stop but",
+      "answerKey": "npm start"
     },
     {
       "id": 5,
-      "q": "How do you create a React component named App?",
-      "hint": "Always export",
-      "answerKey": "function App() {return( <div>!</div>;)} Export default App"
-    },
-    {
-      "id": 6,
-      "q": "What command is used to start the React local development server?",
-      "hint": "Not stop but",
-      "answerKey": "Npm start"
-    },
-    {
-      "id": 7,
       "q": "Which keyword creates a constant in JavaScript?",
       "hint": "In the word",
       "answerKey": "const"
+    },
+    {
+      "id": 6,
+      "q": "This is an HTML-like syntax extension for JavaScript written to be used with React. This is specifically how React adds XML syntax to JavaScript which is compiled to JavaScript at runtime.",
+      "hint": "Not JavaScript but…",
+      "answerKey": "JSX"
+    },
+    {
+      "id": 7,
+      "q": "What tool does React use to compile JSX?",
+      "hint": "Tower of",
+      "answerKey": "Babel"
+    },
+    {
+      "id": 8,
+      "q": "Which operator can be used to conditionally render a React component:",
+      "hint": "and and",
+      "answerKey": "&&"
+    },
+    {
+      "id": 9,
+      "q": "When rendering a list using the JavaScript map() method, what is required for each element rendered?",
+      "hint": "lock and",
+      "answerKey": "key"
+    },
+    {
+      "id": 10,
+      "q": "React component names must begin with an lowercase letter",
+      "hint": "true or false",
+      "answerKey": "false"
     }
   ],
   "players": [
@@ -50,7 +68,7 @@
       "score": 10
     },
     {
-      "name": "Same",
+      "name": "Sam",
       "score": 9,
       "id": 2
     }

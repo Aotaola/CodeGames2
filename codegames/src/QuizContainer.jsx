@@ -53,6 +53,7 @@ const postScore =()=>{
         questionNumber={questionNumber}
         setQuestionNumber={setQuestionNumber}
         timeRemaining={timeRemaining}
+        setTimeRemaining={setTimeRemaining}
         name={name}
         score={score}
         setScore={setScore}

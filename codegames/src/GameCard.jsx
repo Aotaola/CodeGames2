@@ -5,6 +5,7 @@ const GameCard = ({
   questionNumber,
   setQuestionNumber,
   timeRemaining,
+  setTimeRemaining,
   name,
   score,
   setScore
@@ -30,6 +31,7 @@ const GameCard = ({
       console.log("correct");
       setUserInput("");
       setScore(score + 1);
+      setTimeRemaining(10)
     } else {
       setQuestionNumber(questionNumber);
       console.log("incorrect");
