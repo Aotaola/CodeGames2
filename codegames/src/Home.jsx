@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import NavBar from "./NavBar";
 import QuizContainer from "./QuizContainer";
 
 const Home = () => {

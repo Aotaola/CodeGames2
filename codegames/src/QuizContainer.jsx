@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import GameCard from "./GameCard";
+import NavBar from "./NavBar";
 
 const QuizContainer = ({ questions, name, setName }) => {
   const [questionNumber, setQuestionNumber] = useState(0);
@@ -24,23 +25,20 @@ const QuizContainer = ({ questions, name, setName }) => {
   }, [timeRemaining]);
 
   if (!questions[questionNumber]) {
-    return <div>"Game Over"</div> 
-
+    return <div>"Game Over"</div>;
   }
-    
-  
+
   return (
     <div>
+      <NavBar />
       {/* added this element to display the timer */}
-     
       <GameCard
         question={questions[questionNumber]}
         questionNumber={questionNumber}
         setQuestionNumber={setQuestionNumber}
         timeRemaining={timeRemaining}
       />
-      <div>
-      </div>
+      <div></div>
     </div>
   );
 };

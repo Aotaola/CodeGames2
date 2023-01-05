@@ -1,11 +1,17 @@
 import React, { useState } from "react";
-const GameCard = ({ question, questionNumber, setQuestionNumber, timeRemaining }) => {
+import NavBar from "./NavBar";
+const GameCard = ({
+  question,
+  questionNumber,
+  setQuestionNumber,
+  timeRemaining,
+}) => {
   const { q, answerKey, hint } = question;
   const [answer, setAnswer] = useState("");
   const [isCorrect, setIsCorrect] = useState(true);
   const [userInput, setUserInput] = useState("");
   const [formError, setFormError] = useState(false);
-  const [score, setScore] = useState(0)
+  const [score, setScore] = useState(0);
 
   function handleChange(e) {
     setUserInput(e.target.value);
@@ -21,12 +27,12 @@ const GameCard = ({ question, questionNumber, setQuestionNumber, timeRemaining }
       setIsCorrect(!isCorrect);
       console.log("correct");
       setUserInput("");
-      setScore(score+1)
+      setScore(score + 1);
     } else {
       setQuestionNumber(questionNumber);
       console.log("incorrect");
       setUserInput("");
-      setFormError(false)
+      setFormError(false);
       navigator.vibrate(200); // Vibrate for 200ms
     }
     // submit the question and answer to the server

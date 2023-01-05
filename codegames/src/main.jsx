@@ -5,17 +5,12 @@ import "./index.css";
 import App from "./App";
 import Home from "./Home";
 import Footer from "./footer";
-import NavBar from "./NavBar";
 import ScoreCard from "./ScoreCard";
 import { useNavigate } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/game",
     element: <App />,
   },
   {
@@ -28,14 +23,9 @@ const router = createBrowserRouter([
   },
 ]);
 
-
-
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
-    {/* <NavBar /> */}
-    {/* <RouterProvider router={router} /> */}
+    <RouterProvider router={router} />
     <Footer />
   </React.StrictMode>
 );
-

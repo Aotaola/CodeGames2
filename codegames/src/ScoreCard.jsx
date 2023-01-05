@@ -1,4 +1,5 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
+import NavBar from "./NavBar";
 
 const ScoreCard = () => {
   /// funcionality is compleate, all it needs to input automaically
@@ -40,6 +41,7 @@ const ScoreCard = () => {
 
   return (
     <div>
+      <NavBar />
       <h1>Score Board: </h1>
       {players.map((player) => {
         return (
@@ -48,8 +50,7 @@ const ScoreCard = () => {
           </li>
         );
       })}
-   
     </div>
   );
-}
+};
 export default ScoreCard;
