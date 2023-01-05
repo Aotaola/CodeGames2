@@ -51,17 +51,6 @@ const Home = () => {
           <input id="startgame" type="submit" value="Start Game!" />
         </fieldset>
       </form>
-      {/* <div> */}
-        {/* <button
-          className="button-19"
-          onClick={() => {
-            navigate("/game");
-          }}
-        >
-          START GAME!
-        </button>
-      </div>
-      <button onClick={startGame}>Start Game</button> */}
     </div>
   );
 };

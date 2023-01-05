@@ -7,7 +7,7 @@ import Home from "./Home";
 import Footer from "./footer";
 import NavBar from "./NavBar";
 import ScoreCard from "./ScoreCard";
- 
+import { useNavigate } from "react-router-dom";
 
 const router = createBrowserRouter([
   {

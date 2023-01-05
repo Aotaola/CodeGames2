@@ -23,8 +23,7 @@ body {
   background: transparent;
   display: block;
   margin: auto;
-    text-align: center;
-
+  text-align: center;
 }
 
 /*form styles*/
@@ -217,7 +216,7 @@ body {
   padding: 30px;
   font-size: 75px;
   font-weight: bold;
-  color:#2c3e50
+  color: #2c3e50;
 }
 
 .footer {
@@ -228,7 +227,8 @@ body {
   background-color: white;
   color: black;
   text-align: center;
-  padding: 30px;
+  padding: 5px;
+  font-size: 10px;
 }
 
 .button-19 {
@@ -308,11 +308,35 @@ body {
   border-radius: 25px;
   cursor: pointer;
   padding: 10px 5px;
-  margin-top: 30px; 
+  margin-top: 30px;
 }
 
 #startgame {
   background-color: #ee0979;
   color: #ffffff;
+}
 
+/* .codegames {
+  float: left;
+} */
+.navbutton {
+  color: red;
+  float: right;
+  padding: 10px;
+  border: 5px;
+  width: 100px;
+  background: #ee0979;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 25px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+}
+
+#navimg {
+  width: 100px;
+  height: 100px;
+  float: left;
 }
