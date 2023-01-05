@@ -340,3 +340,10 @@ body {
   height: 100px;
   float: left;
 }
+
+.about {
+  display: flexbox;
+  text-align: left
+}
+h1.about{text-align: center;}
+

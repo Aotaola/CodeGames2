@@ -7,6 +7,7 @@ import Home from "./Home";
 import Footer from "./footer";
 import ScoreCard from "./ScoreCard";
 import { useNavigate } from "react-router-dom";
+import About from "./About";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "*",
     element: <div>404 NOT FOUND</div>,
+  },
+  {
+    path: "/about",
+  element: <About/>,
   },
 ]);
 

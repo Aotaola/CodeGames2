@@ -16,6 +16,12 @@ const NavBar = ({setShowGame}) => {
       >
         High Scores
       </button>
+      <button
+        className="navbutton"
+        onClick={() => {
+          navigate("/about");
+        }}
+      >About</button>
       <p></p>
       <button
         className="navbutton"
