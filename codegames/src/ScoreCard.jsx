@@ -42,7 +42,7 @@ const ScoreCard = () => {
     <div>
       <NavBar />
       <h1>Score Board: </h1>
-      {players.map((player) => {
+      {players.map((player) => { 
         return (
           <form id="msform">
             <fieldset>
