@@ -8,6 +8,7 @@ import Footer from "./footer";
 import ScoreCard from "./ScoreCard";
 import { useNavigate } from "react-router-dom";
 import About from "./About";
+import GameOver from "./GameOver";
 
 const router = createBrowserRouter([
   {
@@ -20,7 +21,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/about",
-    element: <About/>,
+    element: <About />,
+  },
+  {
+    path: "/over",
+    element: <GameOver />,
   },
   {
     path: "*",

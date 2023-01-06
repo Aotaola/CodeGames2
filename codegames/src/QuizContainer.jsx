@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import GameCard from "./GameCard";
+import GameOver from "./GameOver";
 import NavBar from "./NavBar";
 
 const QuizContainer = ({ questions, name, score, setScore, players, currentPlayer}) => {
@@ -42,7 +43,7 @@ const postScore =()=>{
 
   if (!questions[questionNumber]) {
     postScore()
-    return <div>"Game Over"</div>;
+    return <GameOver name={name} score={score}/>;
   }
 
   return (
