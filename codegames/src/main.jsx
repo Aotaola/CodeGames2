@@ -9,6 +9,7 @@ import ScoreCard from "./ScoreCard";
 import { useNavigate } from "react-router-dom";
 import About from "./About";
 import GameOver from "./GameOver";
+import GameCard from "./GameCard";
 
 const router = createBrowserRouter([
   {

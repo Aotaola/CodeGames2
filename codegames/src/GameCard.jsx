@@ -8,7 +8,7 @@ const GameCard = ({
   setTimeRemaining,
   name,
   score,
-  setScore
+  setScore,
 }) => {
   const { q, answerKey, hint } = question;
   const [answer, setAnswer] = useState("");
@@ -16,13 +16,12 @@ const GameCard = ({
   const [userInput, setUserInput] = useState("");
   const [formError, setFormError] = useState(false);
 
-  
   function handleChange(e) {
     setUserInput(e.target.value);
     setIsCorrect(e.target.value === answer);
     setAnswer(e.target.value);
   }
-  
+
   function handleSubmit(e) {
     e.preventDefault();
     console.log("submitted");
@@ -32,9 +31,8 @@ const GameCard = ({
       console.log("correct");
       setUserInput("");
       setScore(score + 1);
-      setTimeRemaining(20)
+      setTimeRemaining(20);
       setFormError(true);
-
     } else {
       setQuestionNumber(questionNumber);
       console.log("incorrect");
@@ -44,14 +42,16 @@ const GameCard = ({
     }
     // submit the question and answer to the server
   }
-  
+
   // setTimeRemaining(20)
   return (
     <div>
       <form id="msform" onSubmit={handleSubmit}>
         <fieldset>
+          <h2 className="fs-title" id="question">Question:</h2>
+
           <h2 className="fs-title">{q}</h2>
-          <h3 className="fs-subtitle">Hint: {hint}</h3>
+          <h1 className="fs-subtitle">Hint: {hint}</h1>
           <input
             type="text"
             name="fname"
@@ -73,7 +73,13 @@ const GameCard = ({
           {isCorrect !== true && <p>{isCorrect ? "Correct!" : "Try Again"}</p>}
         </fieldset>
       </form>
-      <div className="timer">Time remaining: {timeRemaining} seconds</div>
+      <div className="timer">
+        <p>Time remaining:</p>
+        <p>
+          <div id="time">{timeRemaining}</div>
+          seconds
+        </p>
+      </div>
       <form id="msform" onSubmit={handleSubmit}>
         <fieldset>
           <h2 className="fs-title">Player: {name}</h2>
