@@ -41,18 +41,26 @@ const ScoreCard = () => {
   return (
     <div>
       <NavBar />
-      <h1>Score Board: </h1>
-      {players.map((player) => { 
-        return (
-          <form id="msform">
-            <fieldset>
-              <h6>
-                Player: {player.name} Score: {player.score}/10
-              </h6>
-            </fieldset>
-          </form>
-        );
-      })}
+
+      <form id="msform">
+        <fieldset>
+          <h1>High Scores: </h1>
+        </fieldset>
+      </form>
+      <form id="msform">
+        <fieldset>
+          {players.map((player) => {
+            return (
+              <div>
+                <h3>Player: {player.name}</h3>
+                <h4>Score: {player.score}/10</h4>
+                <br></br>
+                <br></br>
+              </div>
+            );
+          })}
+        </fieldset>
+      </form>
     </div>
   );
 };
