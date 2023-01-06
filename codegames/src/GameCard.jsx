@@ -33,6 +33,8 @@ const GameCard = ({
       setUserInput("");
       setScore(score + 1);
       setTimeRemaining(20)
+      setFormError(true);
+
     } else {
       setQuestionNumber(questionNumber);
       console.log("incorrect");

@@ -33,7 +33,6 @@ const Home = ({ setShowGame, name, setName, currentPlayer, setCurrentPlayer}) =>
         console.log("CURRENT PLAYER", data);
         setCurrentPlayer(data)
         setShowGame(false);
-        setName("")
       });
   }
 
