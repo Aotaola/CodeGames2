@@ -375,3 +375,12 @@ h1.about {
   font-size: 30px;
   font-weight:bold;
 }
+#hint {
+color:#6441a5;
+background-color:#c5c5f183;
+border-radius: 20px;
+padding: 10px; 
+font-size: 18px;
+
+}
+

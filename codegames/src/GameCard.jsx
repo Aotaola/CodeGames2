@@ -51,7 +51,7 @@ const GameCard = ({
           <h2 className="fs-title" id="question">Question:</h2>
 
           <h2 className="fs-title">{q}</h2>
-          <h1 className="fs-subtitle">Hint: {hint}</h1>
+          <h1 className="fs-subtitle" id="hint">Hint: {hint}</h1>
           <input
             type="text"
             name="fname"
