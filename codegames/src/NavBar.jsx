@@ -6,7 +6,7 @@ const NavBar = ({setShowGame}) => {
 
   return (
     <div className="header">
-      {/* <img src="src/logo.svg" id="navimg"/> */}
+      <img src="/brackets.png" id="navimg" />
       <div className="codegames">CodeGames</div>
       <button
         className="navbutton"
@@ -21,13 +21,15 @@ const NavBar = ({setShowGame}) => {
         onClick={() => {
           navigate("/about");
         }}
-      >About</button>
+      >
+        About
+      </button>
       <p></p>
       <button
         className="navbutton"
         onClick={() => {
           navigate("/");
-          setShowGame(true)
+          setShowGame(true);
         }}
       >
         Home

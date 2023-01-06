@@ -116,7 +116,7 @@ body {
 
 /*headings*/
 .fs-title {
-  font-size: 18px;
+  font-size: 25px;
   text-transform: uppercase;
   color: #2c3e50;
   margin-bottom: 10px;
@@ -126,7 +126,7 @@ body {
 
 .fs-subtitle {
   font-weight: normal;
-  font-size: 13px;
+  font-size: 20px;
   color: #666;
   margin-bottom: 20px;
 }
@@ -235,6 +235,7 @@ body {
   /* <button class="button-19" role="button">Button 19</button> */
 
   /* CSS */
+
   appearance: button;
   background-color: #1899d6;
   border: solid transparent;
@@ -343,7 +344,43 @@ body {
 
 .about {
   display: flexbox;
-  text-align: left
+  text-align: left;
 }
-h1.about{text-align: center;}
+h1.about {
+  text-align: center;
+}
+
+.gameover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 500px;
+  height: 250px;
+  box-sizing: border-box;
+  padding: 40px;
+}
+
+#time {
+  color: white;
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+#question {
+  color:#ee0979; 
+  font-size: 30px;
+  font-weight:bold;
+}
+#hint {
+color:#6441a5;
+background-color:#c5c5f183;
+border-radius: 20px;
+padding: 10px; 
+font-size: 18px;
+
+}
 

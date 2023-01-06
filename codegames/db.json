@@ -3,7 +3,7 @@
     {
       "id": 1,
       "q": "What is the default port number in which the application runs?",
-      "hint": "Jonas Brothers",
+      "hint": "Andre ___ from Outkasr",
       "answerKey": "3000"
     },
     {
@@ -15,7 +15,7 @@
     {
       "id": 3,
       "q": "Write the body of a React Component in the least amount of characters:",
-      "hint": "can include an empty fragment",
+      "hint": "Can include an empty fragment",
       "answerKey": "return(<></>)"
     },
     {
@@ -45,19 +45,19 @@
     {
       "id": 8,
       "q": "Which operator can be used to conditionally render a React component:",
-      "hint": "and and",
+      "hint": "And And",
       "answerKey": "&&"
     },
     {
       "id": 9,
       "q": "When rendering a list using the JavaScript map() method, what is required for each element rendered?",
-      "hint": "lock and ...",
+      "hint": "Lock and ...",
       "answerKey": "key"
     },
     {
       "id": 10,
       "q": "React component names must begin with a lowercase letter",
-      "hint": "true or false",
+      "hint": "True or False",
       "answerKey": "false"
     }
   ],
